@@ -1,0 +1,66 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "invitados": [
+    {
+      "id": "2123",
+      "firstName": "Brandon",
+      "lastName": "Figueroa Figueroa",
+      "email": "brandonf2345@gmail.com",
+      "birthdate": "2024-03-08T06:00:00.000Z",
+      "telefono": "7226810775",
+      "gender": "mujer"
+    },
+    {
+      "id": "369c",
+      "firstName": "Brandon",
+      "lastName": "Figueroa Figueroa",
+      "email": "brandonf2345@gmail.com",
+      "birthdate": "2024-03-05T06:00:00.000Z",
+      "telefono": "7226810775",
+      "gender": "mujer"
+    },
+    {
+      "id": "c65e",
+      "firstName": "Brandon",
+      "lastName": "Figueroa",
+      "email": "demodedmo@demo.com",
+      "birthdate": "2024-03-04T06:00:00.000Z",
+      "telefono": "6543564563",
+      "gender": "otro"
+    },
+    {
+      "id": "2f41",
+      "firstName": "Brandon",
+      "lastName": "Figueroa",
+      "email": "demodedmo@demo.com",
+      "birthdate": "2024-03-02T06:00:00.000Z",
+      "telefono": "6543564563",
+      "gender": "mujer"
+    },
+    {
+      "id": "faf0",
+      "firstName": "Brandon",
+      "lastName": "Figueroa",
+      "email": "demodedmo@demo.com",
+      "birthdate": "2024-03-02T06:00:00.000Z",
+      "telefono": "6543564563",
+      "gender": "mujer"
+    }
+  ]
+}

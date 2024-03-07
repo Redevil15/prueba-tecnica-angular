@@ -1,0 +1,26 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.main {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1248px;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.h-styles{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.action {
+  display: flex;
+  gap: 5px;
+}

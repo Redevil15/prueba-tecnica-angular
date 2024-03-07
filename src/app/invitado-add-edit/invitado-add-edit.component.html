@@ -1,0 +1,62 @@
+<div mat-dialog-title>
+  <h1>Formulario de invitado</h1>
+</div>
+<form [formGroup]="invitadoForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" placeholder="Brandon" formControlName="firstName">
+        <mat-error *ngIf="invitadoForm.get('firstName')?.errors?.['required']">
+          El nombre es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input matInput type="text" placeholder="Figueroa" formControlName="lastName">
+        <mat-error *ngIf="invitadoForm.get('lastName')?.errors?.['required']">
+          El apellido es requerido
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Brandon" formControlName="email">
+        <mat-error *ngIf="invitadoForm.get('email')?.errors?.['required']">
+          Ingresa un email valido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker"  formControlName="birthdate">
+        <mat-error *ngIf="invitadoForm.get('birthdate')?.errors?.['required']">
+          La fecha es requerida
+        </mat-error>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Telefono</mat-label>
+        <input matInput type="text" placeholder="7225554466" formControlName="telefono" maxlength="10">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-radio-group aria-label="Select an option" formControlName="gender">
+        <mat-label><b>Gender</b></mat-label>
+        <mat-radio-button value="hombre">Hombre</mat-radio-button>
+        <mat-radio-button value="mujer">Mujer</mat-radio-button>
+        <mat-radio-button value="otro">Otro</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action-buttons">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'update' : 'save'}}</button>
+  </div>
+</form>
