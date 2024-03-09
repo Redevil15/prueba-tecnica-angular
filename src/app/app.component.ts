@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { InvitadoAddEditComponent } from './invitado-add-edit/invitado-add-edit.component';
 import { InvitadoService } from './services/invitado.service';
 import {MatPaginator} from '@angular/material/paginator';
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
     'gender',
     'action',
   ];
-  dataSource!: MatTableDataSource<any>;
+  dataSource!: MatTableDataSource<any>; // Variable para almacenar la lista de invitados, a la cual se asigna el valor mas tarde
   
   // Decoradores para obtener refrencias a los componentes hijos paginator y sort
   @ViewChild(MatPaginator) paginator!: MatPaginator;

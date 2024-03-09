@@ -43,7 +43,10 @@
     <div class="row">
       <mat-form-field appearance="outline">
         <mat-label>Telefono</mat-label>
-        <input matInput type="text" placeholder="7225554466" formControlName="telefono" maxlength="10">
+        <input matInput type="text" placeholder="7225554466" formControlName="telefono" maxlength="13" minlength="11" (keypress)="onKeyPress($event)" (input)="onTelefoneChange()">
+        <mat-error *ngIf="invitadoForm.get('telefono')?.errors?.['required']">
+          Ingresa un telefono valido
+        </mat-error>
       </mat-form-field>
     </div>
     <div class="row">
